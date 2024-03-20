@@ -34,18 +34,26 @@ button {
   margin: 10px;
 }
 
+.pokemon-display{
+  display: flexbox;
+  flex-direction: row;
+  
+}
+
 /*------------- Card --------------*/
 .card {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px hsl(0, 1%, 16%);
   padding: 20px;
-  margin: 22px;
+  margin: 10px;
   /* Remove text-align: center; as flexbox handles alignment */
   width: 250px;
+  float: inline-start;
   display: flex; /* Use flexbox for overall layout */
   flex-direction: column; /* Stack elements vertically */
 }
+
 
 .card .card-image {
   width: 150px;
@@ -63,19 +71,20 @@ button {
 .card .card-title {
   margin: 0; /* Remove margin for cleaner spacing */
   color: hsl(0, 1%, 16%); /* Text color */
+  text-align: center;
 }
 
 .poke-info {
   display: flex; /* Use flexbox for horizontal layout within card */
-  flex-direction: row;
+  flex-direction: column;
   align-items: center; /* Vertically center image and title */
-  /* Remove unnecessary margin as card already has margin */
+  
 }
 
 .poke-attri {
   /* No styles needed for now, can add styles later for positioning */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin-top: 10px; /* Add some margin after info section */
 }

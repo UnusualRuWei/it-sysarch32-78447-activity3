@@ -14,7 +14,7 @@ function Pokedex() {
           <button className="cn-lang-btn">Chinese</button>
           <button className="fr-lang-btn">French</button>
 
-          <div>
+          <div className="pokemon-display">
             <Pokemon />
           </div>
           
