@@ -37,6 +37,7 @@ button {
 .pokemon-display{
   display: flexbox;
   flex-direction: row;
+  justify-content: center;
   
 }
 
@@ -47,11 +48,10 @@ button {
   box-shadow: 5px 5px hsl(0, 1%, 16%);
   padding: 20px;
   margin: 10px;
-  /* Remove text-align: center; as flexbox handles alignment */
   width: 250px;
   float: inline-start;
-  display: flex; /* Use flexbox for overall layout */
-  flex-direction: column; /* Stack elements vertically */
+  display: flex; 
+  flex-direction: column; 
 }
 
 

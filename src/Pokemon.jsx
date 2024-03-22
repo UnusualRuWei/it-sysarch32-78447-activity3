@@ -10,7 +10,7 @@ function Pokemon({pokemonData,language}) {
           <div className="poke-info">
               <img className="card-image" src={pokemon.image} alt="Profile Pic"></img>
           </div>
-          <h2 className="card-title">{pokemon.name[language]}</h2>
+          <h2 className="card-title">[{pokemon.id}] {pokemon.name[language]}</h2>
 
           <div className="poke-attri">
               {pokemon.type.map((type) => (
