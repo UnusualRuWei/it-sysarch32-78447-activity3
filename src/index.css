@@ -84,8 +84,9 @@ button {
 .poke-attri {
   /* No styles needed for now, can add styles later for positioning */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   margin-top: 10px; /* Add some margin after info section */
 }
 
@@ -94,6 +95,8 @@ button {
   padding: 10px;
   border: 2px black;
   background-color: green;
+  margin: 10px;
+  
 }
 
 .poke-stat {

@@ -1,22 +1,6 @@
 import { useState,useEffect } from "react";
 
-function Pokemon() {
-    const [pokemonData, setPokemonData] = useState(null); // Stores fetched Pokemon data
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        try {
-          const response = await fetch('https://us-central1-it-sysarch32.cloudfunctions.net/pokemon');
-          fetch('https://us-central1-it-sysarch32.cloudfunctions.net/pokemon').then(response => response.json()) .then(data => setPokemonData(data));
-          
-        } catch (error) {
-          console.error('Error fetching Pokemon data:', error);
-          // Handle errors appropriately (e.g., display an error message to the user)
-        }
-      };
-    
-      fetchData(); // Call the function to fetch data on component mount
-    }, []); // Empty dependency array ensures fetching happens only once
+function Pokemon({pokemonData,language}) {
 
     return (
       <>
@@ -26,10 +10,12 @@ function Pokemon() {
           <div className="poke-info">
               <img className="card-image" src={pokemon.image} alt="Profile Pic"></img>
           </div>
-          <h2 className="card-title" >{pokemon.name.english}</h2>
+          <h2 className="card-title">{pokemon.name[language]}</h2>
 
           <div className="poke-attri">
-              <p> {pokemon?.type.join(', ')}</p>
+              {pokemon.type.map((type) => (
+                  <p key={type}>{type}</p>
+                ))}
           </div>
 
           <div className="poke-stat">
